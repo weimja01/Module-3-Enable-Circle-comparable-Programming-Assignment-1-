@@ -1,3 +1,7 @@
+/* Jeff Weimer
+9/17/ 2025
+Module 3 Programming Assignment 1
+ */
 public class Circle extends GeometricObject implements Comparable<Circle> {
     private double radius;
 
@@ -31,7 +35,7 @@ public class Circle extends GeometricObject implements Comparable<Circle> {
     public double getArea(){
         return Math.PI * Math.pow(radius, 2);
     }
-    
+
     public double getDiameter(){
         return 2 * radius;
     }

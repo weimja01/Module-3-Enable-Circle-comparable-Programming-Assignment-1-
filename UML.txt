@@ -1,0 +1,41 @@
+classDiagram
+    GeometricObject <|-- Circle
+    Comparable~Circle~ <|.. Circle
+    
+    class GeometricObject {
+        <<abstract>>
+        - String color = "white"
+        - boolean filled
+        - Date dateCreated
+        # GeometricObject()
+        # GeometricObject(String color, boolean filled)
+        + getColor() String
+        + setColor(String color) void
+        + isFilled() boolean
+        + setFilled(boolean filled) void
+        + getDateCreated() Date
+        + toString() String
+        + getArea() double*
+        + getPerimeter() double*
+    }
+
+    class Circle {
+        - double radius
+        + Circle()
+        + Circle(double radius)
+        + Circle(double radius, String color, boolean filled)
+        + getRadius() double
+        + setRadius(double radius) void
+        + getDiameter() double
+        + getArea() double
+        + getPerimeter() double
+        + equals(Object obj) boolean
+        + hashCode() int
+        + compareTo(Circle other) int
+        + toString() String
+    }
+
+    class Comparable~Circle~ {
+        <<interface>>
+        + compareTo(Circle other) int
+    }

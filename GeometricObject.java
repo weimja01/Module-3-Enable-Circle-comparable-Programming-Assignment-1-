@@ -1,3 +1,8 @@
+/* Jeff Weimer
+9/17/ 2025
+Module 3 Programming Assignment 1
+ */
+
 public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
